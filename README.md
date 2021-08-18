@@ -29,8 +29,9 @@ $ ionic serve -l
 
 ---
 
-3. Preview
-![](https://github.com/deballa/pokedexApp/blob/main/preview-pokedex.jpg) | width=550
+## 🖼️ Preview
+![](https://github.com/deballa/pokedexApp/blob/main/preview-pokedex.jpg | width=550)
+
 
 ## 🛠 Tecnologias
 
@@ -39,4 +40,4 @@ $ ionic serve -l
 
 ---
 
-⌨️ com 💜 por Déborah Ballaminut de Lacerda
+por Déborah Ballaminut de Lacerda 💜 
