@@ -22,13 +22,15 @@ Para executar as aplicações é necessário realizar as seguintes instalações
 
 ## 🧭 Executando a aplicação mobile
 
-> $ npm install
-> $ ionic serve -l 
+```
+$ npm install
+$ ionic serve -l 
+```
 
 ---
 
 3. Preview
-[imagem]
+![](https://github.com/deballa/pokedexApp/blob/main/preview-pokedex.jpg) | width=550
 
 ## 🛠 Tecnologias
 
