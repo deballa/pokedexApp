@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="grass">
+    <ion-title>Pokemons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="grass">
+
+  <ion-item *ngFor="let pokemon of pokemon" lines="full" class="ion-no-padding" routerLink="/home">
+
+    <ion-card>
+      <ion-chip [color]="pokemon.tipos[0] | lowercase">
+        <ion-label>{{pokemon.numero}}</ion-label>
+      </ion-chip>
+      <img [src]="pokemon.foto">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-badge *ngFor="let tipo of pokemon.tipos" [color]="tipo | lowercase">
+            {{tipo}}
+          </ion-badge>
+        </ion-card-subtitle>
+        <ion-card-title>{{pokemon.nome}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{pokemon.descricao}}
+      </ion-card-content>
+    </ion-card>
+
+</ion-item>
+</ion-content>

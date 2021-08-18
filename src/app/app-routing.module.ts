@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'bulbasaur',
+    loadChildren: () => import('./pokemons/bulbasaur/bulbasaur.module').then( m => m.BulbasaurPageModule)
+  },
 ];
 
 @NgModule({
