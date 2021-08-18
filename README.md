@@ -30,7 +30,7 @@ $ ionic serve -l
 ---
 
 ## 🖼️ Preview
-![](https://github.com/deballa/pokedexApp/blob/main/preview-pokedex.jpg | width=550)
+![](https://github.com/deballa/pokedexApp/blob/main/preview-pokedex.jpg)
 
 
 ## 🛠 Tecnologias
