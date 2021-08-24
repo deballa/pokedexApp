@@ -7,7 +7,11 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar (ionChange)="buscarPokemon($event)" placeholder="Buscar Pokemons"></ion-searchbar>
 
-  <ion-item *ngFor="let pokemon of listaPokemonsFiltrada" lines="full" class="ion-no-padding" routerLink="/bulbasaur" >
+  <!-- <ion-item *ngFor="let pokemon of listaPokemonsFiltrada" lines="full" class="ion-no-padding"
+    routerLink="/bulbasaur/{{pokemon.numero}}"> -->
+
+  <ion-item *ngFor="let pokemon of listaPokemonsFiltrada" lines="full" class="ion-no-padding"
+  (click)="abrirPokemon(pokemon)">
     <ion-thumbnail slot="start">
       <img [src]="pokemon.foto">
     </ion-thumbnail>

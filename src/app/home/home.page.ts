@@ -1,4 +1,6 @@
+import { DadosService } from './../services/dados.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -76,7 +78,7 @@ export class HomePage {
 
   listaPokemonsFiltrada = [];
 
-  constructor() {
+  constructor(private dadosService: DadosService, private router: Router) {
     this.retornaPokemon();
   }
 
@@ -93,6 +95,15 @@ export class HomePage {
         pokemon.nome.toLowerCase().includes(busca.trim().toLowerCase())
       );
     }
+  }
+
+  abrirPokemon(pokemon: any): void {
+    //Salva o pokemon clicando no serviço de dados temporário
+    this.dadosService.setDados('pokemon', pokemon);
+
+    //Navega até a página para exibir os dados
+    this.router.navigateByUrl('/dados-pokemon');
+    //this.router.navigateByUrl('/bulbasaur');
   }
 
 }

@@ -12,7 +12,7 @@ export class BulbasaurPage implements OnInit {
       numero: '001',
       nome: 'Bulbasaur',
       foto: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
-      descricao: 'Bulbasaur pode ser visto cochilando sob luz solar intensa. Há uma semente em suas costas. Ao absorver os raios do sol, sua semente cresce progressivamente.',
+      descricao: 'Bulbasaur pode ser visto cochilando sob luz solar intensa, ao absorver os raios do sol, sua semente cresce',
       tipos: [ 'Grass', 'Poison' ]
     }
   ];

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar [color]="pokemon.tipos[0] | lowercase">
+    <ion-title>Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [color]="pokemon.tipos[0] | lowercase">
+  <ion-card>
+    <img [src]="pokemon.foto">
+
+    <ion-item lines="none">
+      {{pokemon.numero}} - {{pokemon.nome}}
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-badge *ngFor="let tipo of pokemon.tipos" [color]="tipo | lowercase">
+        {{tipo}}
+      </ion-badge>
+    </ion-item>
+
+  </ion-card>
+</ion-content>
