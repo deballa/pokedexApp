@@ -1,22 +1,66 @@
 <ion-header>
-  <ion-toolbar [color]="pokemon.tipos[0] | lowercase">
+  <ion-toolbar [color]="pokemon.types[0].type.name | lowercase">
+    <ion-buttons slot="start">
+      <ion-back-button text="voltar" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
     <ion-title>Dados</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [color]="pokemon.tipos[0] | lowercase">
-  <ion-card>
-    <img [src]="pokemon.foto">
+<ion-content [color]="pokemon.types[0].type.name | lowercase">
+  <ion-card class="ion-text-center">
 
-    <ion-item lines="none">
-      {{pokemon.numero}} - {{pokemon.nome}}
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-left tit">{{pokemon.name | titlecase}}</div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-right">{{pokemon.id}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <ion-item lines="none">
-      <ion-badge *ngFor="let tipo of pokemon.tipos" [color]="tipo | lowercase">
-        {{tipo}}
+    <img src="{{url + pokemon.id.toString().padStart(3, '0') + '.png'}}" >
+    <!-- <img [src]="pokemon.sprites.front_default"> -->
+
+    <ion-item class="mt" lines="none">
+      <ion-badge *ngFor="let tipo of pokemon.types" [color]="tipo.type.name | lowercase">
+        {{tipo.type.name | titlecase}}
       </ion-badge>
     </ion-item>
 
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-left">
+              <p> Tamanho: <b>{{pokemon.height}} m </b></p>
+            </div>
+          </ion-col>
+          <ion-col size="5">
+            <div class="ion-text-right">
+              <p> XP: <b>{{pokemon.base_experience}} </b></p>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-left">
+              <p> Peso: <b>{{pokemon.weight}} </b></p>
+            </div>
+          </ion-col>
+          <ion-col size="5">
+            <div class="ion-text-right">
+              <p> Ordem: <b>{{pokemon.order}} </b></p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
   </ion-card>
+
+  <img [src]="pokemon.sprites.other.dream_world.front_default">
+
 </ion-content>

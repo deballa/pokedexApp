@@ -1,3 +1,4 @@
+import { IPokemon } from '../models/IPokemon.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -27,5 +28,9 @@ export class PokemonService {
     //ou: const urlNormal = this.url + '?limit=' + limit + '&offset=' + offset;
 
     return this.http.get<IListaPokemon>(urlConsulta);
+  }
+
+  buscarUmPokemon(url: string): Observable<IPokemon>{
+    return this.http.get<IPokemon>(url);
   }
 }
