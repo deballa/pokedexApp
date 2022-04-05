@@ -1,5 +1,5 @@
 ## 💻 Pokédex App
-Este repositório é referente ao aplicativo que lista Pokemons. Desenvolvido durante a disciplina de Programação de Aplicativos Mobile II - Etec Comendador João Rays Barra Bonita.  
+Este repositório é referente ao aplicativo que lista Pokemons utilizando API (PokéAPI). Desenvolvido durante a disciplina de Programação de Aplicativos Mobile II - Etec Comendador João Rays Barra Bonita.  
 
 ---
 
