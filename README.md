@@ -37,6 +37,8 @@ $ ionic serve -l
 
 - IONIC
 - Angular
+- Typescript
+- API PokéAPI
 
 ---
 
